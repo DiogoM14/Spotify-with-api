@@ -61,7 +61,9 @@ const LoginButton = styled.div`
   }
 `;
 
-export default function Home() {
+export default function Login() {
+  const { query } = useRouter();
+
   return (
     <BasicLayout>
       <Container>
@@ -75,6 +77,7 @@ export default function Home() {
 
           <LoginButton>
             <a href="http://localhost:8888">Login</a>
+            <h2>{query.login}</h2>
           </LoginButton>
         </Main>
       </Container>
